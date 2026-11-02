@@ -5,30 +5,73 @@
     padding: 0;
 }
 
+html {
+    font-size: 16px;
+    /* Base size: 1rem = 16px */
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    font-size: 1rem;
+    /* Task 9.2: 16px */
+}
+
+/* Task 9.2: Responsive Image Styling */
+img.responsive-img,
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+
+/* Task 9.2: Typography using REM units */
+h1 {
+    font-size: 2rem;
+    /* 32px */
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    /* 24px */
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    /* 20px */
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
 }
 
 /* Base Mobile Layout */
 .grid-container {
     display: block;
-    padding: 10px;
+    padding: 0.625rem;
+    /* 10px */
 }
 
 .header,
 .main-content,
 .sidebar,
 .footer {
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 1rem;
+    margin-bottom: 0.625rem;
     background-color: #f4f4f4;
 }
 
 /* Task 9.1: Media Query at 768px (Tablet) */
 @media (min-width: 768px) {
     .grid-container {
-        padding: 20px;
+        padding: 1.25rem;
     }
 }
 
