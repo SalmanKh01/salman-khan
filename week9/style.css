@@ -14,7 +14,39 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     font-size: 1rem;
-    /* Task 9.2: 16px */
+    background-color: #f9f9f9;
+}
+
+/* Task 9.3: Flexbox for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #00bcd4;
 }
 
 /* Task 9.2: Responsive Image Styling */
@@ -30,55 +62,75 @@ img {
 /* Task 9.2: Typography using REM units */
 h1 {
     font-size: 2rem;
-    /* 32px */
     margin-bottom: 0.5rem;
 }
 
 h2 {
     font-size: 1.5rem;
-    /* 24px */
     margin-bottom: 0.5rem;
 }
 
 h3 {
     font-size: 1.25rem;
-    /* 20px */
     margin-bottom: 0.5rem;
 }
 
 p {
     font-size: 1rem;
-    /* 16px */
     margin-bottom: 0.75rem;
 }
 
 /* Base Mobile Layout */
 .grid-container {
     display: block;
-    padding: 0.625rem;
-    /* 10px */
+    padding: 1rem;
 }
 
 .header,
 .main-content,
 .sidebar,
 .footer {
-    padding: 1rem;
-    margin-bottom: 0.625rem;
-    background-color: #f4f4f4;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-/* Task 9.1: Media Query at 768px (Tablet) */
+/* Task 9.3: CSS Grid for Page Sections at 768px (Tablet Layout) */
 @media (min-width: 768px) {
     .grid-container {
-        padding: 1.25rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "header header"
+            "main sidebar"
+            "footer footer";
+        gap: 1rem;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .main-content {
+        grid-area: main;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .footer {
+        grid-area: footer;
     }
 }
 
-/* Task 9.1: Media Query at 1024px (Desktop) */
+/* Task 9.1 & 9.3: Grid Layout for Desktop Screen at 1024px */
 @media (min-width: 1024px) {
     .grid-container {
         max-width: 1200px;
         margin: 0 auto;
+        gap: 1.5rem;
     }
 }
